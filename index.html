@@ -12,26 +12,46 @@
 </head>
 <body>
 
-    <div>
-        <h1>Valuta váltó</h1>
+    <div class="container text-center text-white pt-5">
         
-        <form action="">
-            <label for="">Összeg(HUF)</label><br>
-            <input type="number" id="megadottErtek">
-        </form>
-        
-        <form action="">
-            <label for="">Cél valuta</label><br>
-            <select name="" id="valuta">
-                <option value="EUR">EUR</option>
-                <option value="GBP">GBP</option>
-                <option value="USD">USD</option>
-            </select>
-        </form>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="">Valuta váltó</h1>
+                        <form class="flex">
 
+                            <p class="text-start">Összeg(HUF)</p>
+                            <input type="number" id="megadottErtek" class="form-control me-2">
 
-        <button onclick="meghiv()">Átváltás</button>
-        <p id="eredmeny"></p>
+                        </form>
+
+                        <form class="flex">
+
+                            <p class="text-start">Cél valuta</p>
+                            <select name="" id="valuta" class="form-control me-2">
+                                <option value="EUR">EUR</option>
+                                <option value="GBP">GBP</option>
+                                <option value="USD">USD</option>
+                            </select>
+
+                        </form>
+                        <p></p>
+                        <button onclick="meghiv()">Átváltás</button>
+                        <p id="eredmeny"></p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
     </div>
+
+        
+        
+        
+        
+        
 </body>
 </html>
