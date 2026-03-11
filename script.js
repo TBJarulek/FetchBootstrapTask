@@ -17,11 +17,19 @@ function meghiv() {
         })
         .then(json => {
 
-            let p = document.getElementById("eredmeny");
-            let megadottErtek = document.getElementById("megadottErtek").value;
+            let label = document.getElementById("eredmeny");
+            let megadottErtek = document.getElementById("megadottErtek").value || 0;
             let atvaltasSzorzo = json.data.mid;
 
-            p.innerHTML = `${megadottErtek} HUF = ${megadottErtek * atvaltasSzorzo} ${valasztott}`
+            label.classList.add("mt-2");
+            label.classList.add("mb-2");
+
+            let final = document.getElementById("finalBox");
+            final.classList.add("border");
+            final.classList.add("border-success-subtle");
+
+            
+            label.innerHTML = `${megadottErtek} HUF = ${megadottErtek * atvaltasSzorzo} ${valasztott}`
 
         })
 
